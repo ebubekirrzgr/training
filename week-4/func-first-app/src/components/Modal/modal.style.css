@@ -1,0 +1,29 @@
+.modalWrapper {
+  position: fixed;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scaleY(0.01) scaleX(0);
+  z-index: 1;
+  place-items: center;
+
+  background-color: #252525;
+}
+
+.modalWrapper.active {
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}

@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Post from './components/Post';
 import Loading from './components/Loading';
+import Modal from './components/Modal/';
 
 // TODO: learn hooks
 function App() {
@@ -73,6 +74,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Modal />
       <p>Hello Functional Compenent!</p>
       {/* <p> Counter: {counter}</p>
       <button onClick={() => setCounter(counter + 1)}>Increase Counter</button> */}
