@@ -32,11 +32,12 @@ function App() {
     const id = setTimeout(() => {
       getPosts();
     }, 3000);
-
+    // componentwillunmount && every time when useeffect is called
     return () => {
       clearTimeout(id);
     };
-  }, []);
+  }, [posts]);
+  
 
   console.log(posts);
 
